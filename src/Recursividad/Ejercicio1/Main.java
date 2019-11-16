@@ -2,6 +2,7 @@ package Recursividad.Ejercicio1;
 
 public class Main {
     public static void main(String[] args) {
+
         int number = 1;
         oneToTen(number);
     }
