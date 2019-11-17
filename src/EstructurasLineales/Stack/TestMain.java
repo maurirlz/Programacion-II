@@ -1,6 +1,6 @@
 package EstructurasLineales.Stack;
 
-public class Main {
+public class TestMain {
 
     public static void main(String[] args) {
 

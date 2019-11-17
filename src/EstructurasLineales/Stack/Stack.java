@@ -27,7 +27,7 @@ public class Stack<T> {
        return head == null;
    }
 
-   public T peek() {
+   T peek() {
        if (head == null) {
 
            return null;
