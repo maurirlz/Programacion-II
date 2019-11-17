@@ -113,8 +113,10 @@ public class Funciones {
             acum += (d * d * d);
         }
         if (acum == aux) {
+
             return true;
         } else {
+
             return false;
         }
 

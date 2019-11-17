@@ -8,12 +8,13 @@ public class Main {
         int index = 0;
         int max = arrayOfInts[0];
 
-        findBiggestNumber(index,arrayOfInts,max);
+        findBiggestNumber(index, arrayOfInts, max);
     }
 
     private static void findBiggestNumber(int index, int[] arrayOfInts, int max) {
 
         if (index < arrayOfInts.length) {
+
             if (max < arrayOfInts[index]) {
 
                 max = arrayOfInts[index];
