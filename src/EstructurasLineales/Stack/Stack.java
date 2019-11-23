@@ -30,7 +30,7 @@ public class Stack<T> {
    T peek() {
        if (head == null) {
 
-           return null;
+           throw new NoSuchElementException("The stack is empty.");
        }
 
        return head.data;
