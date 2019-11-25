@@ -206,10 +206,28 @@ public class TreeNode<T extends Comparable<? super T>> {
         this.rightChild = rightChild;
     }
 
+    private StringBuilder toString(StringBuilder prefix, boolean isTail, StringBuilder sb) {
+
+        if (rightChild != null) {
+
+            rightChild.toString(new StringBuilder().append(prefix).append(isTail ? "│   " : "    "), false, sb);
+        }
+
+        sb.append(prefix).append(isTail ? "└── " : "┌── ").append(data.toString()).append("\n");
+
+        if (leftChild != null) {
+
+            leftChild.toString(new StringBuilder().append(prefix).append(isTail ? "    " : "│   "), true, sb);
+        }
+        return sb;
+    }
+
     @Override
     public String toString() {
-        return "TreeNode: " + "data = " + data;
+
+        return this.toString(new StringBuilder(), true, new StringBuilder()).toString();
     }
+
 
     @Override
     public boolean equals(Object o) {

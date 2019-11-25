@@ -1,7 +1,8 @@
 package EstructurasNoLineales.BinarySearchTree.MyPersonalTree;
 
-class Tree<T extends Comparable<? super T>> {
+import EstructurasLineales.Queue.MyPersonalQueue.MyQueue;
 
+class Tree<T extends Comparable<? super T>> {
 
     private TreeNode<T> root;
 
@@ -76,5 +77,38 @@ class Tree<T extends Comparable<? super T>> {
 
             root.traversePostOrder();
         }
+    }
+
+    void printLevels() {
+
+        MyQueue<TreeNode> queue = new MyQueue<>();
+        queue.enqueue(root);
+
+        while (!queue.isEmpty()) {
+
+            TreeNode aux = queue.dequeue();
+            System.out.println(aux.getData() + " ");
+
+            if (aux.getLeftChild() != null) {
+
+                queue.enqueue(aux.getLeftChild());
+            }
+
+            if (aux.getRightChild() != null) {
+
+                queue.enqueue(aux.getRightChild());
+            }
+        }
+    }
+
+    @Override
+    public String toString() {
+
+        if (root != null) {
+            return root.toString();
+
+        }
+
+        return null;
     }
 }

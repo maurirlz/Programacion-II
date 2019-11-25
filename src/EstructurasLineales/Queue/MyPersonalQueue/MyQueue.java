@@ -2,26 +2,26 @@ package EstructurasLineales.Queue.MyPersonalQueue;
 
 import java.util.NoSuchElementException;
 
-class MyQueue<T> {
+public class MyQueue<T> {
 
     private MyDoublyLinkedList<T> queue;
 
-    MyQueue() {
+    public MyQueue() {
 
         this.queue = new MyDoublyLinkedList<>();
     }
 
-    void enqueue(T value) { // mete al final de la cola
+    public void enqueue(T value) { // mete al final de la cola
 
         queue.addLast(value);
     }
 
-    T dequeue() throws NoSuchElementException{ // remueve desde el frente de la cola
+    public T dequeue() throws NoSuchElementException{ // remueve desde el frente de la cola
 
         return queue.removeFromFront();
     }
 
-    T peek() throws NoSuchElementException { // chequea la head de la lista
+    public T peek() throws NoSuchElementException { // chequea la head de la lista
 
         return queue.getFirst();
     }
@@ -31,17 +31,17 @@ class MyQueue<T> {
         return queue.size();
     }
 
-    boolean isEmpty() {
+    public boolean isEmpty() {
 
         return size() == 0;
     }
 
-    void clearQueue() {
+    public void clearQueue() {
 
         queue.clear();
     }
 
-    void printQueue() {
+    public void printQueue() {
 
         queue.printList();
     }
