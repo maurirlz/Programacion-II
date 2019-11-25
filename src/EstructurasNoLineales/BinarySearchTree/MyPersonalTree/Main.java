@@ -23,6 +23,6 @@ public class Main {
 
         /*TreeNode<Integer> test = intTree.get(25);*/
 
-        intTree.depth();
+        intTree.printLevels();
     }
 }
