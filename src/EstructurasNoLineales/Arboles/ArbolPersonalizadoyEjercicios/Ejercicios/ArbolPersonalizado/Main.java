@@ -1,4 +1,4 @@
-package EstructurasNoLineales.BinarySearchTree.MyPersonalTree;
+package EstructurasNoLineales.Arboles.ArbolPersonalizadoyEjercicios.Ejercicios.ArbolPersonalizado;
 
 public class Main {
 

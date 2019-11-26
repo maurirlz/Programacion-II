@@ -1,12 +1,12 @@
-package EstructurasNoLineales.BinarySearchTree.MyPersonalTree;
+package EstructurasNoLineales.Arboles.ArbolPersonalizadoyEjercicios.Ejercicios.ArbolPersonalizado;
 
 import EstructurasLineales.Queue.MyPersonalQueue.MyQueue;
 
-class Tree<T extends Comparable<? super T>> {
+public class Tree<T extends Comparable<? super T>> {
 
     private TreeNode<T> root;
 
-    void insert(T value) {
+    public void insert(T value) {
 
         if (root == null) {
 
@@ -17,7 +17,7 @@ class Tree<T extends Comparable<? super T>> {
         }
     }
 
-    T min() {
+    public T min() {
 
         if (root == null) {
 
@@ -28,7 +28,7 @@ class Tree<T extends Comparable<? super T>> {
         }
     }
 
-    T max() {
+    public T max() {
 
         if (root == null) {
 
@@ -39,7 +39,7 @@ class Tree<T extends Comparable<? super T>> {
         }
     }
 
-    TreeNode<T> get(T value) {
+    public TreeNode<T> get(T value) {
 
         if (root != null) {
 
@@ -49,13 +49,13 @@ class Tree<T extends Comparable<? super T>> {
         return null;
     }
 
-    void delete(T value) {
+    public void delete(T value) {
 
         root.delete(root, value);
     }
 
 
-    void traversePreOrder() {
+    public void traversePreOrder() {
 
         if (root != null) {
 
@@ -63,7 +63,7 @@ class Tree<T extends Comparable<? super T>> {
         }
     }
 
-    void traverseInOrder() {
+    public void traverseInOrder() {
 
         if (root != null) {
 
@@ -71,7 +71,7 @@ class Tree<T extends Comparable<? super T>> {
         }
     }
 
-    void traversePostOrder() {
+    public void traversePostOrder() {
 
         if (root != null) {
 
@@ -79,7 +79,7 @@ class Tree<T extends Comparable<? super T>> {
         }
     }
 
-    void printLevels() {
+    public void printLevels() {
 
         MyQueue<TreeNode> queue = new MyQueue<>();
         queue.enqueue(root);
