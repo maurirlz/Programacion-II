@@ -4,7 +4,7 @@ import java.util.NoSuchElementException;
 
 public class Stack<T> {
 
-   Node<T> head;
+   private Node<T> head;
 
    public void push(T stuff) {
 
